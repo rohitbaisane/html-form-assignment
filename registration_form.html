@@ -5,35 +5,93 @@
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+     .input-block {
+        margin-top: 10px;
+        margin-bottom: 10px;
+     }
+     p{
+        margin:2px;
+     }
+     main {
+        width:1200px;
+        margin-left:auto;
+        margin-right:auto;
+     }
+     fieldset {
+        margin-top: 10px;
+     }
+</style>
 <body>
     <main>
         <h1>Student Registration Form</h1>
         <p>Please fill out the form below to register</p>
-        <form method="POST" >
+        <hr></hr>
+        <form method="POST" action="/form" >
             <fieldset>
                 <legend>Personal information</legend>
-                <div>
+                <div class="input-block">
                     <label>First Name:</label>
                     <input type="text">
                 </div>
-                <div>
+                <div class="input-block">
                     <label>Last Name:</label>
                     <input type="text">
                 </div>
-                <div>
+                <div class="input-block">
                     <label>Date of Birth:</label>
                     <input type="date">
+                </div>
+                <div class="input-block">
+                    <span>Gender:</span>
+                    <label>Male</label>
+                    <input type="radio" value="gender"> 
+                    <label>Female</label>
+                    <input type="radio" value="gender">
+                    <label>Other</label>
+                    <input type="radio" value="gender">
+                </div>
+                <div class="input-block">
+                    <label>Email:</label>
+                    <input type="email">
+                </div>
+                <div class="input-block">
+                    <label>Phone:</label>
+                    <input type="text">
                 </div>
             </fieldset>
             <fieldset>
                 <legend>Address information</legend>
+                <div class="input-block">
+                    <p>Address:</p>
+                    <textarea cols="25" rows="5"></textarea>
+                </div>
+                <div class="input-block">
+                    <label>City:</label>
+                    <input type="text">
+                </div>
+                <div class="input-block">
+                    <label>State:</label>
+                    <input type="text">
+                </div>
+                <div class="input-block">
+                    <label>ZIP Code:</label>
+                    <input type="text">
+                </div>
             </fieldset>
             <fieldset>
-                <legend>Educational information</legend>
+                <legend></legend>
+                <div class="input-block">
+                    <p>Interests and Hobbies:</p>
+                    <textarea cols="20" rows="5"></textarea>
+                </div>
+                <div class="input-block">
+                    <p>Additional Comments:</p>
+                    <textarea cols="20" rows="5"></textarea>
+                </div>
             </fieldset>
-            <fieldset>
-                <legend>Additional information</legend>
-            </fieldset>
+            <hr></hr>
+            <button>Register</button>
         </form>
     </main>
 </body>
